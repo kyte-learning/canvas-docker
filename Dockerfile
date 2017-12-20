@@ -75,7 +75,7 @@ RUN for config in amazon_s3 delayed_jobs domain file_store security external_mig
 
 RUN $GEM_HOME/bin/bundle install --jobs 8 --without="mysql"
 RUN yarn install --pure-lockfile
-RUN COMPILE_ASSETS_NPM_INSTALL=1 $GEM_HOME/bin/bundle exec rake canvas:compile_assets_dev
+RUN COMPILE_ASSETS_NPM_INSTALL=0 $GEM_HOME/bin/bundle exec rake canvas:compile_assets_dev
 
 RUN mkdir -p log tmp/pids public/assets public/stylesheets/compiled \
     && touch Gemmfile.lock
