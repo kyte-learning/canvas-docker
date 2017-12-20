@@ -6,6 +6,6 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - db-data:/var/lib/postgresql/9.3
+      - db-data:/var/lib/postgresql/9.3/main
 volumes:
   db-data:
