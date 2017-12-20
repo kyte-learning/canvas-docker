@@ -7,9 +7,7 @@ services:
       - "3000:3000"
     volumes:
       - db-data:/var/lib/postgresql/9.3/main
-    environment:
-      - ACCOUNT_NAME
-      - ADMIN_EMAIL
-      - ADMIN_PASSWORD
+    env_file:
+      - canvas-variables.env
 volumes:
   db-data:
