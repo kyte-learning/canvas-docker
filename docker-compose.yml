@@ -1,0 +1,11 @@
+version: "3"
+services:
+  canvas:
+    image: lbjay/canvas-docker:latest
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - db-data:/var/lib/postgresql/9.3
+volumes:
+  db-data:
