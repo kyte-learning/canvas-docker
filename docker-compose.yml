@@ -1,7 +1,7 @@
 version: "3"
 services:
   canvas:
-    build: .
+    image: lbjay/canvas-docker:latest
     restart: always
     ports:
       - "3000:3000"
